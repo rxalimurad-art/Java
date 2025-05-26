@@ -110,6 +110,33 @@ public class CollectionsPractice {
 
 
     public void testLinkedList() {
+        linkedList.add(3);
+        linkedList.add(2);
+        linkedList.add(1);
+        linkedList.add(0);
+        System.out.println(linkedList);
+        Collections.reverse(linkedList);
+        System.out.println(linkedList);
+
+        LinkedList<Card> cardLinkedList = new LinkedList<>();
+        cardLinkedList.add(new Card("a", 1));
+        cardLinkedList.add(new Card("b", 2));
+        cardLinkedList.add(new Card("c", 3));
+
+        cardLinkedList.forEach(System.out::println);
+        Card newCard = cardLinkedList.get(0);
+        cardLinkedList.isEmpty();
+
+        for(Card card : cardLinkedList) {
+            System.out.println(card.getCardName());
+        }
+        if (cardLinkedList.contains(newCard)) {
+            System.out.println(cardLinkedList.contains(newCard));
+        }
+
+
+
+
     }
 
     public void testVector() {
