@@ -133,28 +133,86 @@ public class CollectionsPractice {
         if (cardLinkedList.contains(newCard)) {
             System.out.println(cardLinkedList.contains(newCard));
         }
+        LinkedList<String> linkedList2 = new LinkedList<>(Arrays.asList("a", "b", "c"));
 
-
+        cardLinkedList.offer(newCard);
 
 
     }
 
     public void testVector() {
+    Vector<Integer> vector1 = new Vector<>();
+    Vector<Integer> vector2 = new Vector<>();
+    vector1.add(1);
+    vector1.add(2);
+    vector1.add(3);
+    vector1.add(4);
+
+    vector1.remove(2);
+    System.out.println(vector1);
+
+
     }
 
     public void testHashSet() {
+    HashSet<String> hashSet = new HashSet<>();
+    hashSet.add("Apple");
+    hashSet.add("Banana");
+    hashSet.add("Orange");
+    System.out.println(hashSet);
+
     }
 
     public void testTreeSet() {
+        // can give compartor
+        TreeSet<String> treeSet = new TreeSet<> ((a,b)-> b.compareTo(a)) ;
+        treeSet.add("Apple");
+        treeSet.add("Banana");
+        treeSet.add("Banana1");
+//        treeSet.add(null); null not allowed
+        SortedSet<String> sub = treeSet.subSet("Banana", "Apple");
+        TreeSet<String> treeSet1 = new TreeSet<>(sub);
+        System.out.println(treeSet1);
     }
 
     public void testLinkedHashSet() {
+        LinkedHashSet<String> linkedHashSet = new LinkedHashSet<>();
+        linkedHashSet.add("Apple");
+        linkedHashSet.add("Banana");
+        linkedHashSet.add("Banana1");
+        linkedHashSet.add("Orange");
+        System.out.println(linkedHashSet);
+
     }
 
     public void testPriorityQueue() {
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>();
+        priorityQueue.add(1);
+        PriorityQueue<Card> cardPriorityQueue = new PriorityQueue<>((c1,c2) -> c2.getCardName().compareTo(c1.getCardName()));
+        cardPriorityQueue.add(new Card("b", 1));
+        cardPriorityQueue.add(new Card("a", 1));
+        cardPriorityQueue.add(new Card("t", 1));
+        cardPriorityQueue.add(new Card("z", 1));
+        cardPriorityQueue.add(new Card("z", 1));
+
+        while (!cardPriorityQueue.isEmpty()) {
+            System.out.println(cardPriorityQueue.poll().getCardName());
+        }
     }
 
     public void testHashMap() {
+        HashMap<Integer, String> hashMap = new HashMap<>();
+        hashMap.put(1, "Apple");
+        hashMap.put(2, "Banana");
+        hashMap.put(3, "Banana1");
+
+        hashMap.keySet().forEach(System.out::println);
+        for(Map.Entry<Integer, String> entry : hashMap.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
+//        hashCode() → finds candidate bucket
+//        equals() → scans entries in that bucket to find the correct key
+
     }
 
     public void testTreeMap() {
