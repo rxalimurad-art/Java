@@ -1,4 +1,4 @@
-import com.java.Collections;
+import com.java.collections.CollectionsPractice;
 import com.java.basic.VariablesAndDataTypes;
 import com.java.basic.Operators;
 import com.java.basic.ControlFlowStatements;
@@ -27,8 +27,21 @@ public class Main {
         Cat cat1= (Cat) animal;
         cat1.run();
 
-        Collections c = new Collections();
-        c.manuplate();
+        CollectionsPractice c = new CollectionsPractice();
+        c.testArrayList();
+        c.testLinkedList();
+        c.testVector();
+        c.testHashSet();
+        c.testTreeSet();
+        c.testLinkedHashSet();
+        c.testPriorityQueue();
+        c.testHashMap();
+        c.testTreeMap();
+        c.testLinkedHashMap();
+        c.testArray();
+        c.testMultiDimensionArray();
+        c.testJaggedArray();
+
 
     }
 }
