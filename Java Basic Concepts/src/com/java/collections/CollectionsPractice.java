@@ -4,6 +4,7 @@ import com.java.model.Card;
 
 import java.io.*;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class CollectionsPractice {
@@ -136,8 +137,6 @@ public class CollectionsPractice {
         LinkedList<String> linkedList2 = new LinkedList<>(Arrays.asList("a", "b", "c"));
 
         cardLinkedList.offer(newCard);
-
-
     }
 
     public void testVector() {
@@ -176,6 +175,7 @@ public class CollectionsPractice {
     }
 
     public void testLinkedHashSet() {
+        // persist insertion order
         LinkedHashSet<String> linkedHashSet = new LinkedHashSet<>();
         linkedHashSet.add("Apple");
         linkedHashSet.add("Banana");
@@ -216,17 +216,126 @@ public class CollectionsPractice {
     }
 
     public void testTreeMap() {
+    TreeMap<Integer, String> treeMap = new TreeMap<>();
+    treeMap.put(1, "Apple");
+    treeMap.put(4, "Banana");
+    treeMap.put(3, "Banana1");
+    treeMap.put(2, "Orange");
+    System.out.println(treeMap);
+    }
+    public void testNavigableMap() {
+    NavigableMap<Integer, String> navigableMap = new TreeMap<>();
+    navigableMap.put(1, "Apple");
+    navigableMap.remove(2);
+    System.out.println(navigableMap.get(3) == null);
+
     }
 
     public void testLinkedHashMap() {
+    LinkedHashMap<Integer, String> linkedHashMap = new LinkedHashMap<>();
+    linkedHashMap.put(1, "Apple");
+    linkedHashMap.put(2, "Banana");
+    linkedHashMap.put(3, "Banana1");
+
     }
 
     public void testArray() {
+        int[] intArray = new int[]{1, 2, 3, 4, 5};
+        Card[] stringArray = new Card[intArray.length];
+        stringArray[0] = new Card("a", 1);
+        stringArray[4] = new Card("a", 1);
+        for (int i = 0; i < stringArray.length; i++) {
+            System.out.println(stringArray[i]);
+        }
+
+    Arrays.sort(intArray);
+
+
     }
 
     public void testMultiDimensionArray() {
+        double[][][] newArray = new double[4][4][3];
+        newArray[0][0][0] = 1;
+        newArray[0][1][0] = 1;
+        newArray[2][2][1] = 1;
+        for (int i = 0; i < newArray.length; i++) {
+            for (int j = 0; j < newArray[i].length; j++) {
+                for (int k = 0; k < newArray[i][j].length; k++) {
+                    System.out.print(newArray[i][j][k]);
+                }
+                System.out.println();
+            }
+        }
+
     }
 
     public void testJaggedArray() {
+    int[][] jaggedArray = new int[][]{{1, 2}, {3, 4,4}};
+    int[][] jaggaedArray = new int[5][];
+        jaggaedArray[0] = new int[]{1, 2};
+        jaggaedArray[1] = new int[]{3, 4,4,5};
+    }
+
+
+    public void testConcurrentHashMap() {
+        ConcurrentHashMap<String, Integer> frequencyMap = new ConcurrentHashMap<>();
+        frequencyMap.put("a", 1);
+
+        frequencyMap.compute("a", (key,value) -> value == null ? 1 : value + 1);
+        frequencyMap.computeIfAbsent("a", (key) -> 1);
+
+        System.out.println(frequencyMap);
+
+    }
+
+    public void testStack() {
+    }
+
+    public void testCopyOnWriteArrayList() {
+    }
+
+    public void testEnumSet() {
+    }
+
+    public void testCopyOnWriteArraySet() {
+    }
+
+    public void testBitSet() {
+    }
+
+    public void testNavigableSet() {
+    }
+
+    public void tstQueue() {
+    }
+
+    public void testDeque() {
+    }
+
+    public void testLinkedBlockingQueue() {
+    }
+
+    public void testArrayBlockingQueue() {
+    }
+
+    public void testDelayQueue() {
+    }
+
+    public void testSynchronousQueue() {
+    }
+
+    public void testLinkedTransferQueue() {
+    }
+
+    public void testConcurrentSkipListMap() {
+    }
+
+    public void testEnumMap() {
+    }
+
+    public void testWeakHashMap() {
+    }
+
+    public void testIdentityHashMap() {
     }
 }
