@@ -289,6 +289,11 @@ public class CollectionsPractice {
     }
 
     public void testStack() {
+        System.out.println("Testing Stack");
+        Stack<Integer> stack = new Stack<>();
+        stack.push(1);
+        stack.push(2);
+        stack.parallelStream().forEach(System.out::println);
     }
 
     public void testCopyOnWriteArrayList() {
