@@ -1,15 +1,15 @@
  [
-   2   {
-   3     "id": "us-chi-wg",
-   4     "country": "United States",
-   5     "city": "Chicago",
-   6     "countryCode": "US",
-   7     "ping": 12,
-   8     "tags": ["streaming"],
-   9     "proto": "wireguard",
-  10     "host": "37.1.210.180",
-  11     "config": "[Interface]\nPrivateKey = SDsZhQnNgqGYhqoJpzI/PJVNsGK0zabGC9oxwmhE5Ek=\nAddress = 10.66.66.2/32,fd42:42:42::2/128\nDNS = 1.1.1.1,1.0.0.1\n\n[Peer]\nPublicKey = k9WZJL/2yyalOs+/oQa
-     JN5ytT+VqdzZ5mjxrzwrYyjo=\nPresharedKey = /DzYDxqcOSq12WrISUrK9AtIwjJN5YvLr15iYhlicw4=\nEndpoint = 37.1.210.180:61048\nAllowedIPs = 0.0.0.0/0,::/0\nPersistentKeepalive = 25",
-  12     "premium": false
-  13   }
-  14 ]
+    {
+      "id": "us-chi-wg",
+      "country": "United States",
+      "city": "Chicago",
+      "countryCode": "US",
+      "ping": 12,
+      "tags": ["streaming"],
+      "proto": "wireguard",
+      "host": "37.1.210.180",
+      "config": "[Interface]\nPrivateKey = SDsZhQnNgqGYhqoJpzI/PJVNsGK0zabGC9oxwmhE5Ek=\nAddress = 10.66.66.2/32,fd42:42:42::2/128\nDNS = 1.1.1.1,1.0.0.1\n\n[Peer]\nPublicKey = 
+  k9WZJL/2yyalOs+/oQaJN5ytT+VqdzZ5mjxrzwrYyjo=\nPresharedKey = /DzYDxqcOSq12WrISUrK9AtIwjJN5YvLr15iYhlicw4=\nEndpoint = 37.1.210.180:61048\nAllowedIPs = 0.0.0.0/0,::/0\nPersistentKeepalive = 25",
+      "premium": false
+    }
+  ]
